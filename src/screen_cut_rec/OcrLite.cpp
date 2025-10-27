@@ -116,7 +116,7 @@ OcrResult OcrLite::detect_img(const cv::Mat &src, int padding, int maxSideLen,
     cv::Mat paddingSrc = makePadding(rgbSrc, padding);
     ScaleParam scale = getScaleParam(paddingSrc, resize);
 
-    OcrResult result = detect("in_memory", "in_memory", paddingSrc, paddingRect, scale,
+    OcrResult result = detect("last", "-rec", paddingSrc, paddingRect, scale,
                               boxScoreThresh, boxThresh, unClipRatio, doAngle, mostAngle);
     // --- 可视化：将识别框和文字画在图像上 ---
     for (const auto &tb : result.textBlocks) {
@@ -137,7 +137,7 @@ OcrResult OcrLite::detect_img(const cv::Mat &src, int padding, int maxSideLen,
 
     // 显示结果图像
     cv::imshow("OCR Result", rgbSrc);
-    cv::waitKey(2000);
+    cv::waitKey(1000);
     cv::destroyWindow("OCR Result");
     
     return result;

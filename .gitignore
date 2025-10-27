@@ -4,3 +4,4 @@
 *.zip
 /opencv_MSVC/
 /ncnn_MSVC/
+/output/*.jpg

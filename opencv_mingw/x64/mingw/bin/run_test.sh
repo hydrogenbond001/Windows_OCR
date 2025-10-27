@@ -1,1 +1,0 @@
-./handwrite.exe ./ocr.jpg
