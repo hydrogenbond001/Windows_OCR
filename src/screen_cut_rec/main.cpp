@@ -235,7 +235,7 @@ void DisplayResult(const std::string &text)
     // 自动换行处理（每60个字符插入换行符）
     std::wstring formattedText;
     int lineLength = 0;
-    const int maxLineLength = 20; // 每行最大字符数
+    const int maxLineLength = 50; // 每行最大字符数
 
     for (int i = 0; wstr[i] != L'\0'; ++i)
     {
